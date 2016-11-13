@@ -1,0 +1,38 @@
+
+<html>
+<head>
+   
+</head><body>
+<ion-view view-title="Lista Hũ">
+  <ion-content>
+
+  <ion-list>
+    <label class="item item-input">
+	  <span class="input-label">Desde: </span>
+	  <input type="date" ng-model="inicio" >
+	</label>
+	<label class="item item-input">
+	  <span class="input-label">Hasta: </span>
+	  <input type="date" ng-model="fin">
+	</label>
+	<div class="row">
+	   <div class="col text-center">
+	      <button class="button button-small button-positive" ng-click="getSelect(inicio, fin)">Buscar</button>
+	   </div>
+	</div>
+	</ion-list>
+    <ion-list>
+	 
+		      	<ion-item ng-repeat=" opt in denuncias" href="#/app/numero/{{opt.id}}" ng-click="Input(opt)">
+			     
+					        <p><b>Fecha: </b>{{ opt.added | date:'dd / MM / yyyy' }}</p>
+				 			<p><b>Denuncia: </b>{{ opt.tipo }}</p>
+				</ion-item>
+	     
+		
+    </ion-list>
+
+  </ion-content>
+
+</ion-view></body>
+</html>

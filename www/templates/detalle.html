@@ -1,0 +1,38 @@
+
+<ion-view view-title="Datos de la Denuncia"><ion-content>
+  <div class="list">
+
+  <div class="item item-divider">
+    Información
+  </div>
+
+  <a class="item">
+    Número: {{ service.numero }}
+  </a>
+  <a class="item">
+    Categoría: {{ service.tipo }}
+  </a>
+  <a class="item">
+    Fecha: {{ service.added | date:'dd / MM / yyyy' }}
+  </a>
+    <a class="item">
+    Descripción: <br>
+   
+        {{ service.desc }}
+
+  </a>
+  <div class="item item-divider">
+    Captura de Pantalla
+  </div>
+
+  <a class="item">
+   <div class="list card"><div class="item item-image">
+    <img ng-src="{{ service.screenshot }}"/>
+    </div></div>
+  
+  </a>
+
+</div>
+  </ion-content>
+</ion-view>
+

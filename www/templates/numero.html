@@ -1,0 +1,34 @@
+
+<html>
+<head>
+  
+  
+</head><body>
+<ion-view view-title="Lista Hũ">
+  <ion-content>
+    <ion-list>
+	 <div><div class="item item-input-inset" >
+	    <label class="item-input-wrapper">
+	      <input type="number" placeholder="09XXXXXXXX" ng-model="customer">
+	    </label>
+	    <button class="button button-small button-positive" ng-click="getInput()">
+	      Buscar
+	    </button>
+	  </div>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.4.6/angular-locale_es-es.js"></script>
+  
+      	<div>
+		      	<ion-item ng-repeat=" opt in greeting" href="#/app/numero/{{opt.id}}" ng-click="Input(opt)">
+			     
+					        <p><b>Fecha: </b>{{ opt.added | date:'dd / MM / yyyy' }}</p>
+				 			<p><b>Denuncia: </b>{{ opt.tipo }}</p>
+				</ion-item>
+	     
+		</div></div>
+    </ion-list>
+    
+  </ion-content>
+
+</ion-view></body>
+</html>

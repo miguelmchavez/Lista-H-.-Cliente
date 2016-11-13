@@ -1,0 +1,44 @@
+
+<html>
+<head>
+   
+</head><body>
+<ion-view view-title="Lista Hũ">
+  <ion-content>
+    <div class="item row">
+      <div class="col">
+        <label class="item-input item-select">
+          <div class="input-label">
+          	Tipo: 
+            </div>
+          <select ng-model="dat.model">
+            <option ng-repeat="item in dat.option" value="{{item.id}}">{{item.title}}</option>
+   
+          </select>
+
+        </label>
+
+      </div>
+      <div class="col">
+        <div class="item-input-inset">
+          <button class="button button-small button-positive" ng-click="getSelect()">
+            Buscar
+          </button>
+        </div>
+      </div>
+    </div>
+    <ion-list>
+	 
+		      	<ion-item ng-repeat=" opt in denuncias" href="#/app/numero/{{opt.id}}" ng-click="Input(opt)">
+			     
+					        <p><b>Fecha: </b>{{ opt.added | date:'dd / MM / yyyy' }}</p>
+				 			<p><b>Denuncia: </b>{{ opt.tipo }}</p>
+				</ion-item>
+	     
+		
+    </ion-list>
+
+  </ion-content>
+
+</ion-view></body>
+</html>
