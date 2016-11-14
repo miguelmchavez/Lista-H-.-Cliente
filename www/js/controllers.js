@@ -71,8 +71,8 @@ return {
 
 .controller('Numero', function($scope, $http, Data) {
 
-    $scope.getInput = function() {
-      $http.get('https://listahu.org/api/v1/denuncias/?numero=' + 595 + parseFloat($scope.customer)).then(function(response) {
+    $scope.getInput = function(customer) {
+      $http.get('https://listahu.org/api/v1/denuncias/?numero=' + 595 + parseFloat(customer)).then(function(response) {
             $scope.greeting = response.data.results;
         });
       };
